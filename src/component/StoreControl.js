@@ -107,7 +107,7 @@ class StoreControl extends React.Component {
 
         // Hide the alert after 3 seconds
         setTimeout(() => {
-            this.setState({ showAlert: false });
+            this.setState({ showAlert: false })
         }, 3000);
     };
 
