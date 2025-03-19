@@ -35,6 +35,7 @@ function AddNewItemForm(props) {
                         style={{ ...myHeaderStyles.myImg }}
                         src={imagePreview || "placeholder.jpg"}// Placeholder for image preview
                         alt="Preview"
+                       
                     />
                 </div>
                 <div style={{ ...flexBoxStyles.myFlex2, ...MyFormStyles.formInputCont }}>
@@ -44,6 +45,7 @@ function AddNewItemForm(props) {
                         onChange={handleImageAdd}
                         type="file"
                         name="img"
+                        require
                     />
 
                     {/* Dynamically generate text inputs */}
@@ -53,6 +55,7 @@ function AddNewItemForm(props) {
                             type="text"
                             name={elm} // Use the correct name attribute
                             placeholder={`Enter ${elm}`} // Add placeholder for better UX
+                            require
                         
                         />
                     ))}
