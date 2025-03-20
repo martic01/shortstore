@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types"; // Import PropTypes
-import fakeApi from "./fakeApi";
 import MyFormStyles from "./FormStyle";
 import myItemStyles from "./itemStyle";
 import myHeaderStyles from "./MyHeaderStyle";
@@ -20,6 +19,7 @@ function AddNewItemForm(props) {
             price: event.target.price.value,
             color: event.target.color.value,
             size: event.target.size.value,
+            rating:'',
             description: event.target.description.value,
         };
 
@@ -28,8 +28,8 @@ function AddNewItemForm(props) {
     }
     return (
         <div style={{ ...flexBoxStyles.myFlex, ...MyFormStyles.Formbody }}>
-            <button onClick={onCloseForm} style={{ ...myItemStyles.closeButton }}>×</button>
             <form style={{ ...flexBoxStyles.myFlex, ...MyFormStyles.form }} onSubmit={handleNewItemForm}>
+            <button onClick={onCloseForm} style={{ ...myItemStyles.closeButton }}>×</button>
                 <div style={{ ...flexBoxStyles.myFlex, ...myItemStyles.itemDetailImgDiv }}>
                     <img
                         style={{ ...myHeaderStyles.myImg }}
@@ -41,11 +41,11 @@ function AddNewItemForm(props) {
                 <div style={{ ...flexBoxStyles.myFlex2, ...MyFormStyles.formInputCont }}>
                     {/* File input for image */}
                     <input
-                        style={{ ...MyFormStyles.formFile }}
+                        style={{ ...MyFormStyles.formInput }}
                         onChange={handleImageAdd}
                         type="file"
                         name="img"
-                        require
+                        required
                     />
 
                     {/* Dynamically generate text inputs */}
@@ -55,7 +55,7 @@ function AddNewItemForm(props) {
                             type="text"
                             name={elm} // Use the correct name attribute
                             placeholder={`Enter ${elm}`} // Add placeholder for better UX
-                            require
+                            required
                         
                         />
                     ))}
