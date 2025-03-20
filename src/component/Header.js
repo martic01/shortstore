@@ -3,7 +3,7 @@ import cartIcon from '../images/carticon.png';
 import myHeaderStyles from "./MyHeaderStyle";
 import flexBoxStyles from "./FlexBoxStyle";
 
-function Header({ toggleCartVisibility,count }) {
+function Header({ toggleCartVisibility,count,toggleFormVisibility }) {
     return (
         <nav style={{ ...flexBoxStyles.myFlex, ...myHeaderStyles.myNav }}>
             <h1 style={{ ...myHeaderStyles.myLogo }}>ShortStore</h1>
@@ -18,6 +18,7 @@ function Header({ toggleCartVisibility,count }) {
             <ul style={{ ...flexBoxStyles.myFlex, ...myHeaderStyles.myUl }}>
                 <li>Home</li>
                 <li>About</li>
+                <li onClick={toggleFormVisibility} style={{...myHeaderStyles.myButton}}>Add Item</li>
             </ul>
             <div
                 className="checkCart"

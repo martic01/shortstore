@@ -15,6 +15,8 @@ function ItemList({ mainItemList, onAddToCart, toggleItemDetailsVisibility }) {
                     name={item.name}
                     brand={item.brand}
                     price={item.price}
+                    description={item.description}
+                    rating={item.rating}
                     quantity={item.quantity}
                     addToCart={() => onAddToCart(item)}
                     toggleItemDetailsVisibility={() => toggleItemDetailsVisibility(item)} // Pass as a function
