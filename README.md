@@ -54,6 +54,8 @@ The project is designed to be lightweight and easy to understand, making it idea
 * Add to Cart: Add items to the cart and update quantities.*
 * Cart Management: View the cart, remove items, and adjust quantities.*
 * Checkout: Simulate a checkout process with a confirmation message.*
+* Display Item Detail: Displays the item full details.*
+* Rating Logic: To reduce and Increase Rating.*
 * Responsive Design: The application is designed to work seamlessly on different screen sizes.
 
 
