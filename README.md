@@ -123,12 +123,15 @@ Embed a short video demonstration here to showcase your project in action.
 │   ├── App.js              # Main application component
 │   ├── Header.js           # Header component
 │   ├── MyHeaderStyles.js   # Header styles
+│   ├── alert.js             # alert component
 │   ├── fakeApi.js          # Mock data for items
 │   ├── FlexBoxStyles.js    # Flexbox utility styles
 │   ├── StoreControl.js     # Main state management component
 │   ├── ItemList.js         # Component to display list of items
-│   ├── item.js            # Individual item component
-│   ├── ItemDetail.js       # Component for item details
+│   ├── item.js             # Individual item component
+│   ├── ItemDetail.js         # Component for item details
+│   ├── AddNewItemForm.js      # Component for new item form 
+│   ├── formStyles.js         #  form styles 
 │   ├── MyItemStyles.js    # Item styles
 │   ├── Cart.js            # Cart component
 │   ├── MyCartStyles.js    # Cart styles
